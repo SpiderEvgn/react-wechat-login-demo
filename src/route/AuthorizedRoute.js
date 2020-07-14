@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { Route, Redirect, useLocation } from 'react-router-dom'
 import { AppContext } from 'context-manager.js'      // 状态引用步骤 1
-import axios from 'axios'
+import axios from 'utils/Axios'
 
 const AuthorizedRoute = ({ children, ...rest }) => {
 

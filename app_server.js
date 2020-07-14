@@ -10,11 +10,11 @@ const sleep = ms => (
 app.use(cookieParser('secret-openid'))
 app.get('/api/fetch-wechat-userinfo', async (req, res) => {
   var openid = ''
-  await sleep(500)
+  await sleep(5000)
 
   const wechat_config ={
-    appid: 'wx1697bfecb4a0a4de',
-    secret: 'fa7acfe1717e829dbf5a00d03bae2b1e'
+    appid: '[your-appid]',
+    secret: '[your-secret]'
   }
   const wechat_openid_link = `https://api.weixin.qq.com/sns/oauth2/access_token?appid=${wechat_config.appid}&secret=${wechat_config.secret}&code=${req.query.code}&grant_type=authorization_code`
 

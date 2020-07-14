@@ -9,7 +9,7 @@ const LoginPage = () => {
   const { from } = location.state || { from: { pathname: '/' }}
 
   const wechat_config = {
-    appid: 'wx1697bfecb4a0a4de',
+    appid: '[yours-appid]',
     domain: '192.168.0.100%3A3000',
     scope: 'snsapi_base',
     state: 'test'
