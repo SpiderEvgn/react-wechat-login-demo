@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react'
 import { Route, Redirect, useLocation } from 'react-router-dom'
 import { AppContext } from 'context-manager.js'      // 状态引用步骤 1
+import axios from 'axios'
 
 const AuthorizedRoute = ({ children, ...rest }) => {
 
   const { state } = useContext(AppContext)     // 状态引用步骤 2
   const location = useLocation()
+
+  useEffect(() => {
+    axios(`/api/fetch-wechat-userinfo`)
+      .then(res => console.log(res.data))
+  })
 
   return (
     <Route
